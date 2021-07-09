@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+</head>
+<style>
+    html{
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+    }
+    body{
+        margin: 0px;
+        background: rgb(4, 34, 68);
+       
+    }
+    main{
+        width: 100%;
+        height: 80%;
+        position:absolute;
+        overflow: hidden;
+    }
+    #box1{
+        width:500px;
+        height: 600px;
+        background-image:url(n-removebg-preview.png) ;
+        position: absolute;
+        bottom: -100%;
+        left: 30%;
+        animation: anim 2s forwards,anim2 4s forwards 3s;
+
+    }
+    #box1:after{
+        content: '';
+        position: absolute;
+        
+        width:500px;
+        height:600px;
+        background-image:url(n2-removebg-preview.png) ;
+        left:0px;
+        z-index: -1;
+    
+    }
+    @keyframes anim{
+        from{
+            bottom:-100%;
+
+        }
+        to{
+            bottom:0;
+
+        }
+    }
+    @keyframes anim2{
+        from{
+            left:30%;
+            width:530px;
+        }
+        to{
+            width:0px;
+            left:60%;
+        }
+        }
+        #box2{
+            width:auto;
+            height:auto;
+            font-family:'bahnschrift Condensed';
+            color: white;
+            font-size: 10em;
+            font-weight: 500;
+            line-height: 130px;
+            position: absolute;
+            top:250px;
+            left: 100px;
+            overflow: hidden;
+            
+
+        }
+        p{  margin-left: 15px ;
+            font-size: 2rem;
+        }
+        #text{
+            position: relative;
+            left: -100%;
+            animation: anim3 2s forwards 3s;
+        }
+        
+        @keyframes anim3{
+            from{
+                left: -100%;
+            }
+            to{
+                left:0%;
+            }
+        }
+        @keyframes anim5{
+            from{
+                right: -100%;
+            }
+            to{
+                right:5%;
+            }
+        }
+        #box3{
+            overflow:hidden;
+
+        }
+        #container{
+            width: 100%;
+            position:absolute;
+            top: -100%;
+            animation:anim4 2s forwards 2.7s;
+
+}
+#logo{
+    float: left;
+    margin-left:50px;
+    margin-top: 5px;
+    display: fixed;
+
+}
+#logo img{
+    width: 200px;
+    height: 200px;
+
+}
+
+#menu{
+    font-family: 'bahnschrift Condensed';
+    font-size: 20px;
+    color: white;
+    letter-spacing: 2px;
+    margin-right: 150px;
+    margin-top: 40px;
+    float: right;
+    flex-direction: column;
+
+}
+#menu ul{
+    list-style: none;
+
+}
+#menu ul li{
+    display: inline-block;
+    margin-left: 100px;
+
+}
+#menu ul li a{
+    color:white
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 50px;
+    margin: 0 5px;
+}
+
+a.active,a:hover{
+  
+    transition: 0.3s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+   
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+    margin-top: 80px;
+    margin-left: 100px;
+}
+#check{
+    display: none;
+}
+@media (max-width:1295px){
+        .checkbtn{
+            display: block;
+            margin-top: 40px;
+        }
+        ul{
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            top: 80px;
+            left: -100%;
+            text-align: center;
+
+        }
+       nav ul li{
+            display: block;
+            margin: 50px 0;
+            line-height: 30px;
+            flex-direction: column;
+        }
+        nav ul li a{
+            font-size: 25px;
+        }
+        a:hover, a.active{
+            background: none;
+            color: blue;
+        }
+#check:checked ~ ul{
+    left: 0;
+}
+}
+@keyframes anim4{
+    from{
+        top:-100%;
+    }
+    to{
+        top:0%;
+    }
+}
+
+#feature{
+    display: flex;
+    
+    font-size:3rem ;
+    color: white;
+    font-family:'bahnschrift Condensed' ;
+    
+    margin-top: 750px ;
+    margin-left: 0px;
+    position: relative;
+    left: -100%;
+    animation: anim3 2s forwards 3s;
+}
+.feature1{
+    position: relative;
+    color: white;
+    width: 750px;
+    height: 250px;
+    background-color: rgb(224, 170, 238);
+    font-size: 0.8rem;
+    margin-left: 50px;
+    position: relative;
+    left: -100%;
+    animation: anim3 6s forwards 3s;
+     border: purple  4px;
+     border-style: groove;
+     border-radius: 20px;
+    }
+.feature3{ 
+    color: white;
+    width: 950px;
+    height: 250px;
+    background-color: rgb(224, 170, 238);
+    font-size: 0.8rem;
+    margin-left: 50px;
+    position: relative;
+    left: -100%;
+    animation: anim3 7s forwards 2.5s;
+    border: purple  4px;
+     border-style: groove;
+     border-radius: 20px;
+}
+.feature2{
+    color: white;
+    width: 750px;
+    height: 250px;
+    background-color:  rgb(143, 198, 229);
+    font-size: 0.8rem;
+    margin-left: 750px;
+    position: relative;
+    right: -100%;
+    animation: anim5 8s forwards 2s;
+    border: rgb(9, 0, 128)  4px;
+     border-style: groove;
+     border-radius: 20px;
+}
+.feature4{
+    color: white;
+    width: 650px;
+    height: 250px;
+    font-size: 0.8rem;
+    margin-left: 850px;
+    position: relative;
+    background-color:  rgb(143, 198, 229);
+    right: -100%;
+    animation: anim5 9s forwards 1s;
+    border:  rgb(9, 0, 128)  4px;
+     border-style: groove;
+     border-radius: 20px;
+    
+
+
+  
+    
+}
+#p1,#p2{
+    margin-left: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+#p3{
+    margin-left: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#image1{
+    width:250px;
+    height:200px;
+    margin-left:750px ;
+    margin-top: 30px;
+
+    position: absolute;
+    top: 0;
+    left: 0%;
+}
+#image2{
+    width: 250px;
+    margin-right: 800px;
+    position: absolute;
+    top: 0;
+    right: 5%;
+    margin-top: 30px;
+}
+#image3{
+    width: 300px;
+    position: absolute;
+    top: 0;
+    left: 105%;
+    margin-top: 30px;
+}
+#image4{
+    width: 250px;
+    margin: 30px;
+    position: absolute;
+    top: 0;
+    right: 105%;
+    margin-top: 30px;
+    
+
+}
+
+h2{
+    font-family:'bahnschrift Condensed' ;
+    font-size: 3rem;
+    margin-left: 50px;
+    animation: anim3 2s forwards 3s;
+}
+#about_us{
+    animation: anim3 2s forwards 3s;
+}
+.au{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1rem;
+    border: rgb(226, 16, 226) solid 2px;
+    color: white;
+    border-radius: 50px;
+    animation: anim3 2s forwards 3s;
+    
+    
+
+}
+h1{
+    color: white;
+    font-family:'bahnschrift Condensed' ;
+    font-size: 5rem;
+    margin-left: 600px;
+    animation: anim3 2s forwards 3s;
+    width: 700px;
+
+}
+
+#contact{
+    position: relative;
+    animation: anim3 10s forwards 3s;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.3;
+    background: url('con2.jpg') no-repeat center center/cover;
+   
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input, 
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+} 
+
+#contact-box form{
+    width: 40%;
+    color: white;
+    
+}
+
+#contact-box label{
+   font-size: 1.3rem;
+   font-family:'bahnschrift Condensed' ;
+
+}
+
+
+.h-primary{
+    font-family:'bahnschrift Condensed' ;
+    font-size: 6rem;
+    padding: 12px;
+    color: white;
+    margin-left: 520px;
+    animation: anim3 10s forwards 3s
+}
+
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color:rgb(95, 174, 238);
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor:pointer;
+}
+
+
+</style>
+<body>
+    <div id="main">
+        <div id="box1">
+        </div>
+        <div id="box2">
+            <div id="text">PIGEON
+                <p>  
+                      MAKE YOUR FRIENDS EVERYWHERE</p>
+            </div>
+        </div>
+        <div id="box3">
+            <div id="container">
+                <div id="logo"><img src="nfinal logo.jpg"  ></div>
+                <div id="menu">
+                    <nav>
+                    <input type="checkbox" id="check" >
+                    <label for="check" class="checkbtn">
+                        <i class="fas fa-bars"></i> </label>
+                    <ul>
+                        <li><a class="active"href="\landing page\login\login.html">SIGNIN/SIGNUP</a></li>
+                        <li><a href="#feature">FEATURES</a></li>
+                        <li><a href="#about_us">ABOUT US</a></li>
+                        <li><a href="#contact">CONTACT US</a></li>
+                    </ul>
+                </nav>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="feature"><h1>FEATURES</h1></div>
+        <div class="feature1">
+            <h2>SEND YOUR THOUGHTS</h2>
+            <p id="p1">You can share your thoughts with world with us </p>
+            <img src="sharing-ideas chan_23-2147501744_prev_ui.png" id="image1">
+        </div>
+        <div class="feature2">
+           <h2>MAKE RELATIONS</h2>
+           <p id="p2">You can make strong relations around the world with us</p>
+           <img src="online relation final 2w.png" id="image2">
+        </div>
+        <div class="feature3">
+            <h2>FUN PLACE</h2>
+            <p id="p3">You can fun with your friends by sharing media and movies name </p>
+            <img src="fun final.png" id="image3">
+        </div>
+        <div class="feature4">
+            <h2>CHAT</h2>
+            <p id="p4">Enjoy our chat feature to share views</p>
+            <img src="cchat.png" id="image4">
+
+        </div>
+    </div>
+
+    <section id="about_us">
+        <h1>ABOUT US</h1>
+        <div class="au"><p>
+            We tried our best to make this website.We are the students of the oldest and one of the most successful institutes of our country named as "Atal-bihari Vajpyee Indian Institute of Information technology and Management,Gwalior".Our team consist of three developers Ishaan sharma,Tejal Edulakanti,Ujjawal Gupta and Two senior web developers Harsh sharma sir and Nafees sir.
+        </p></div>
+    </section>
+    <section id="contact">
+        <h1 class="h-primary center">CONTACT US</h1>
+        <div id="contact-box">
+            <form action="">
+                <div class="form-group">
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email: </label>
+                    <input type="email" name="name" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number: </label>
+                    <input type="phone" name="name" id="phone" placeholder="Enter your phone">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message: </label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                </div>
+                <button class="btn">SUBMIT</button>
+            </form>
+           
+        </div>
+    </section>
+   
+   
+</body>
+</html>
